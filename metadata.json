@@ -1,0 +1,10 @@
+{
+  "name": "Smart Home IoT Dashboard",
+  "description": "Modern dark-mode Smart Home IoT dashboard with Firebase Realtime Database integration and Voice Commands.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
