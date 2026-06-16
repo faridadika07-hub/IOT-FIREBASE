@@ -164,6 +164,27 @@ export default function App() {
              .replace(/\btiga\b/g, '3')
              .replace(/\bempat\b/g, '4');
     
+    // Check Sensors
+    if (cmd.includes('sensor')) {
+      const temp = Number(sensors.temperature || 0).toFixed(1);
+      const hum = Number(sensors.humidity || 0).toFixed(1);
+      speakText(`Suhu saat ini adalah ${temp} derajat celcius, dan kelembapan adalah ${hum} persen`);
+      addLog(`Cek sensor via suara: Suhu ${temp}°C, Kelembapan ${hum}%`, 'info');
+      return;
+    }
+    if (cmd.includes('suhu') || cmd.includes('temperatur') || cmd.includes('temperature')) {
+      const temp = Number(sensors.temperature || 0).toFixed(1);
+      speakText(`Suhu saat ini adalah ${temp} derajat celcius`);
+      addLog(`Cek suhu via suara: ${temp}°C`, 'info');
+      return;
+    }
+    if (cmd.includes('kelembapan') || cmd.includes('kelembaban') || cmd.includes('lembab') || cmd.includes('humidity')) {
+      const hum = Number(sensors.humidity || 0).toFixed(1);
+      speakText(`Kelembapan saat ini adalah ${hum} persen`);
+      addLog(`Cek kelembapan via suara: ${hum}%`, 'info');
+      return;
+    }
+
     // Check Patterns (Scenes)
     if (cmd.includes('pola 1')) {
       if (cmd.includes('mati') || cmd.includes('padam') || cmd.includes('nonaktif')) {

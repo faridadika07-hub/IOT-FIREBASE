@@ -25,7 +25,7 @@ export function SensorCard({ type, value }: SensorCardProps) {
         </p>
         <div className="flex items-baseline gap-1">
           <span className="text-5xl font-mono font-bold text-slate-100 drop-shadow-md">
-            {value.toFixed(1)}
+            {Number(value || 0).toFixed(1)}
           </span>
           <span className={`text-xl font-semibold ${isTemp ? 'text-orange-400' : 'text-cyan-400'}`}>
             {isTemp ? '°C' : '%'}

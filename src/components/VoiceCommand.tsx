@@ -110,7 +110,7 @@ export function VoiceCommand({ onCommand }: VoiceCommandProps) {
             </motion.div>
           ) : (
              <motion.p key="hint" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="text-slate-500 text-sm">
-                Ucapkan "Nyalakan lampu 1", "Aktifkan Pola 1", atau "Matikan Pola 2"
+                Ucapkan "Cek Sensor", "Nyalakan lampu 1", "Aktifkan Pola 1"
              </motion.p>
           )}
         </AnimatePresence>
